@@ -1,0 +1,25 @@
+@itemWidth: 25%;
+@itemHeight: 200px;
+.newWidth (@s: 1, @mult: 1) {
+  width:  @mult * @s;
+}
+.newHeight (@s: 1, @mult: 1) {
+  height:  @mult * @s;
+}
+
+.masonry-item {
+  width: @itemWidth;
+  height:@itemHeight;
+  float: left;
+}
+.masonry-item img{
+  width:100%;
+  height: 100%;
+}
+.masonry-item--width2 { .newWidth(@itemWidth, 2); }
+.masonry-item--width3 { .newWidth(@itemWidth, 3); }
+.masonry-item--width4 { .newWidth(@itemWidth, 4); }
+
+.masonry-item--height2 { .newHeight(@itemHeight, 2); }
+.masonry-item--height3 { .newHeight(@itemHeight, 3); }
+.masonry-item--height4 { .newHeight(@itemHeight, 4); }

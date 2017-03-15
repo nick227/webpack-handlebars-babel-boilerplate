@@ -1,0 +1,38 @@
+@columnWidth: 8.333333333333333%;
+@gutter: 0;
+ 
+@allColumns: @columnWidth * 12;
+@allGutters: (@gutter * 12) * 2;
+@totalWidth: @allColumns + @allGutters;
+ 
+.theWidth (@theColumn: 1, @theGutter: 0) {
+  width: ((@columnWidth * @theColumn) + (@gutter * @theGutter));
+}
+ 
+ 
+.col-1 { .theWidth(1,0); }
+.col-2 { .theWidth(2,2); }
+.col-3 { .theWidth(3,4); }
+.col-4 { .theWidth(4,6); }
+.col-5 { .theWidth(5,8); }
+.col-6 { .theWidth(6,10); }
+.col-7 { .theWidth(7,12); }
+.col-8 { .theWidth(8,14); }
+.col-9 { .theWidth(9,16); }
+.col-10 { .theWidth(10,18); }
+.col-11 { .theWidth(11,20); }
+.col-12 { .theWidth(12,22); }
+ 
+.column {
+	margin: 0 @gutter;
+	height:100%;
+}
+.row {
+	width: @totalWidth;
+	margin: 0 auto;
+	display:flex;
+    flex-direction: row;
+	height:100%;
+	align-items:center;
+	outline:2px solid @black;
+}
